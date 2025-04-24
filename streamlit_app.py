@@ -165,7 +165,7 @@ def crear_media_valores_en_semana(df):
     # Seleccionar la variable a analizar
     columna_seleccionada = st.selectbox(
         "Selecciona la variable a analizar:",
-        options=df.select_dtypes(include=['float64', 'int64']).columns,
+        options=df.select_dtypes(include=['float64', 'int64'], exclude=['SEMANA correlativa']).columns,
         key="variable_temporal"
     )
 
